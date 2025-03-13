@@ -5,7 +5,7 @@ import { LightColor } from "./light";
 const theme = createTheme({
   lightColors: LightColor,
   darkColors: DarkColor,
-  mode: "light",
+  mode: "dark",
   components: {
     Button: (props, theme) => {
       return {

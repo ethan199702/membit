@@ -1,5 +1,4 @@
 import { Tabs } from "expo-router";
-import NavBar from "@/components/NavBar";
 import HomeIcon from "@/assets/icons/home.svg";
 import JmIcon from "@/assets/icons/jm.svg";
 import SettingIcon from "@/assets/icons/setting.svg";
@@ -10,7 +9,6 @@ const TabLayout = () => {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: "#000",
-        header: (props) => <NavBar {...props} />,
         tabBarInactiveTintColor: "#ADADAD",
         headerStyle: {
           backgroundColor: "#fff",
