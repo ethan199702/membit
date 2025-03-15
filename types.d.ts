@@ -15,5 +15,8 @@ declare module "@rneui/themed" {
     buttonSecondaryText: string;
     pagePrimaryBg: string;
     pageSecondaryBg: string;
+    textPrimary: string;
+    textSecondary: string;
+    borderColor: string;
   }
 }

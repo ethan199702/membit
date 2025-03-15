@@ -11,4 +11,7 @@ export const DarkColor = {
   buttonSecondaryText: "#FFFFFF", // 次要按钮文字颜色
   pagePrimaryBg: "#000000", // 页面主背景色
   pageSecondaryBg: "#222222", // 页面次背景色
+  textPrimary: "#FFFFFF", // 主要文字颜色
+  textSecondary: "#606060", // 次要文字颜色
+  borderColor: "#222", // 边框颜色
 };

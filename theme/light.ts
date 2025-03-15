@@ -11,4 +11,7 @@ export const LightColor = {
   buttonSecondaryText: "#000000", // 次要按钮文字颜色
   pagePrimaryBg: "#efefef", // 页面主背景色
   pageSecondaryBg: "#ffffff", // 页面次背景色
+  textPrimary: "#000000", // 主要文字颜色
+  textSecondary: "#606060", // 次要文字颜色
+  borderColor: "#EBEBEB", // 边框颜色
 };

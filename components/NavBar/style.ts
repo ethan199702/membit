@@ -4,7 +4,7 @@ import { FullTheme } from "@rneui/themed";
 const getStyles = (theme: FullTheme) =>
   StyleSheet.create({
     nav_bar_box: {
-      height: 60,
+      height: 80,
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-between",
