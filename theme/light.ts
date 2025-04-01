@@ -14,4 +14,6 @@ export const LightColor = {
   textPrimary: "#000000", // 主要文字颜色
   textSecondary: "#606060", // 次要文字颜色
   borderColor: "#EBEBEB", // 边框颜色
+  moveBy: "#B0FF5B",
+  blackFontColor: "#000000",
 };

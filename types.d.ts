@@ -18,5 +18,7 @@ declare module "@rneui/themed" {
     textPrimary: string;
     textSecondary: string;
     borderColor: string;
+    moveBy: string;
+    blackFontColor: string;
   }
 }

@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native";
 const getStyles = (theme: FullTheme) =>
   StyleSheet.create({
     theme_box: {
-      marginTop: 300,
+      paddingTop: 300,
     },
     language_box: {
       width: "100%",

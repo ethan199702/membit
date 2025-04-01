@@ -14,4 +14,6 @@ export const DarkColor = {
   textPrimary: "#FFFFFF", // 主要文字颜色
   textSecondary: "#606060", // 次要文字颜色
   borderColor: "#222", // 边框颜色
+  moveBy: "#B0FF5B",
+  blackFontColor: "#000000",
 };

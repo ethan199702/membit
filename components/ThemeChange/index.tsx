@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { View, Text } from "react-native";
-import { Overlay, Button } from "@rneui/themed";
+import { Overlay, Button, Icon } from "@rneui/themed";
+import { useTranslation } from "react-i18next";
 
 import { useGetStyle } from "@/hooks/useGetStyle";
 import { useAppStore } from "@/store";
@@ -14,12 +15,16 @@ interface ThemeChangeProps {
 
 const ThemeChange: FC<ThemeChangeProps> = ({ isVisible, close }) => {
   const styles = useGetStyle(getStyles);
-  const { theme, setTheme } = useAppStore();
+  const { theme, setTheme, setLanguage } = useAppStore();
+  const { t, i18n } = useTranslation();
+
+  const languageChange = (language: string) => {
+    i18n.changeLanguage(language);
+    setLanguage(language as "en" | "zh");
+  };
 
   const changheTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
-
-    close();
   };
   return (
     <Overlay
@@ -31,23 +36,43 @@ const ThemeChange: FC<ThemeChangeProps> = ({ isVisible, close }) => {
       }}
     >
       <View style={styles.theme_box}>
+        <Icon
+          name="close"
+          containerStyle={{
+            position: "absolute",
+            top: 40, // 适配刘海屏
+            right: 20,
+            zIndex: 10,
+            backgroundColor: "rgba(0,0,0,0.1)",
+            borderRadius: 20,
+            padding: 10,
+          }}
+          onPress={close}
+        />
         <View style={styles.language_box}>
           <Button
             title={"English"}
             buttonStyle={{
-              width: 175,
+              width: 150,
             }}
+            onPress={() => {
+              languageChange("en");
+            }}
+            type={i18n.language === "en" ? "solid" : "outline"}
           />
           <Button
-            title={"中文"}
+            title={"繁體中文"}
             buttonStyle={{
-              width: 175,
+              width: 150,
             }}
-            type="solid"
+            onPress={() => {
+              languageChange("zh");
+            }}
+            type={i18n.language === "zh" ? "solid" : "outline"}
           />
         </View>
         <Button
-          title={theme === "dark" ? "Light mode" : "Dark mode"}
+          title={theme === "dark" ? `${t("light_mode")}` : `${t("dark_mode")}`}
           onPress={changheTheme}
         ></Button>
       </View>
